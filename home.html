@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #141414;
+      color: #fff;
+    }
+
+    header {
+      background-color: #141414;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #e50914;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-right: 35px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #b3b3b3;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #141414;
+      padding: 10px;
+      min-width: 120px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 5px 0;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('ai-generated-8697246_1920.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .cta {
+      background-color: #e50914;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .cta:hover {
+      background-color: #b81d24;
+    }
+
+    .featured {
+      padding: 50px 20px;
+    }
+
+    .featured h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .content-carousel {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .content-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .content-container {
+      display: flex;
+      animation: carousel 20s linear infinite;
+    }
+
+    @keyframes carousel {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .content-item {
+      position: relative;
+      margin-right: 10px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .content-item img {
+      width: 300px;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .hover-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .content-item:hover .hover-details {
+      opacity: 1;
+    }
+
+    .hover-details h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .hover-details p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .play-btn {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .see-more {
+      color: #b3b3b3;
+      font-size: 16px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    .trending {
+      padding: 50px 20px;
+    }
+
+    .trending h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .continue-watching {
+      padding: 50px 20px;
+    }
+
+    .continue-watching h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      background-color: #141414;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: #737373;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #b3b3b3;
+    }
+
+    footer p {
+      color: #737373;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    footer select {
+      background-color: transparent;
+      color: #737373;
+      border: 1px solid #737373;
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    footer select option {
+      background-color: #141414;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Netflix-Logo-PNG-image-200x200.png" alt="NOVA"> -->
+      <h1>NOVA</h1>
+    </div>
+    <nav>
+      <ul>
+        <!-- <li><a href="#">Home</a></li> -->
+        <li><a href="#">Browse</a></li>
+        <li><a href="mylist.html">My List</a></li>
+        <li class="dropdown">
+          <a href="#">Language</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">English</a></li>
+            <li><a href="#">Spanish</a></li>
+            <li><a href="#">French</a></li>
+          </ul>
+        </li>
+        <li><a href="signin.html" class="account">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Unlimited movies, TV shows, and more.</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+      <a href="#" class="cta">Get Started</a>
+    </section>
+
+    <section class="featured">
+      <h2>Popular on NOVA</h2>
+      <div class="content-carousel">
+        <div class="content-container">
+          <div class="content-item">
+            <img src="6360cd939963074268417953-stranger-things-1-4-tv-show-poster.jpg" alt="Stranger Things">
+            <div class="hover-details">
+              <h3>Stranger Things</h3>
+              <p>A small town's supernatural mysteries unravel.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="the-crown-900x600.jpg" alt="The Crown">
+            <div class="hover-details">
+              <h3>The Crown</h3>
+              <p>The story of the reign of Queen Elizabeth II.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="aea212575572799476430c0f1f9550a0.jpg" alt="Money Heist">
+            <div class="hover-details">
+              <h3>Money Heist</h3>
+              <p>A group of thieves pull off the biggest heist in history.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="unnamed.jpg" alt="Squid Game">
+            <div class="hover-details">
+              <h3>Squid Game</h3>
+              <p>Desperate people compete in a deadly game for a huge cash prize.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-more">See More</a>
+    </section>
+
+    <section class="featured">
+      <h2>TV Shows</h2>
+      <div class="content-carousel">
+        <div class="content-container">
+          <div class="content-item">
+            <img src="bridgerton-season1-featured.jpg" alt="Bridgerton">
+            <div class="hover-details">
+              <h3>Bridgerton</h3>
+              <p>A Regency-era drama following the Bridgerton family.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="14300682691.jpeg" alt="Peaky Blinders">
+            <div class="hover-details">
+              <h3>Peaky Blinders</h3>
+              <p>A crime family in 1919 Birmingham, England.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="p17580186_b_h8_ak.jpg" alt="The Witcher">
+            <div class="hover-details">
+              <h3>The Witcher</h3>
+              <p>A monster hunter fights to find his place in a world that hates him.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="d32f0-16709562731935-1920.avif" alt="Ozark">
+            <div class="hover-details">
+              <h3>Ozark</h3>
+              <p>A financial advisor drags his family into a money laundering scheme.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-more">See More</a>
+    </section>
+
+    <section class="trending">
+      <h2>Trending Now</h2>
+      <div class="content-carousel">
+        <div class="content-container">
+          <div class="content-item">
+            <img src="Untitled-design.jpg" alt="Wednesday">
+            <div class="hover-details">
+              <h3>Wednesday</h3>
+              <p>A young Wednesday Addams investigates a series of murders.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="dahmer-monster-netflix-review.jpg" alt="Dahmer - Monster: The Jeffrey Dahmer Story">
+            <div class="hover-details">
+              <h3>Dahmer - Monster: The Jeffrey Dahmer Story</h3>
+              <p>The story of one of the most notorious serial killers of all time.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="the-sandman-what-we-know-so-far.avif" alt="The Sandman">
+            <div class="hover-details">
+              <h3>The Sandman</h3>
+              <p>A dark fantasy series based on the DC Comics series.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="16-9-key-art-house-of-the-dragon-S2-key-art-lower-TA.avif" alt="House of the Dragon">
+            <div class="hover-details">
+              <h3>House of the Dragon</h3>
+              <p>A prequel to Game of Thrones, set 200 years earlier.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-more">See More</a>
+    </section>
+
+    <section class="continue-watching">
+      <h2>Continue Watching</h2>
+      <div class="content-carousel">
+        <div class="content-container">
+          <div class="content-item">
+            <img src="the-crown-900x600.jpg" alt="The Crown">
+            <div class="hover-details">
+              <h3>The Crown</h3>
+              <p>The story of the reign of Queen Elizabeth II.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="6360cd939963074268417953-stranger-things-1-4-tv-show-poster.jpg" alt="Stranger Things">
+            <div class="hover-details">
+              <h3>Stranger Things</h3>
+              <p>A small town's supernatural mysteries unravel.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="d32f0-16709562731935-1920.avif" alt="Ozark">
+            <div class="hover-details">
+              <h3>Ozark</h3>
+              <p>A financial advisor drags his family into a money laundering scheme.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+          <div class="content-item">
+            <img src="aea212575572799476430c0f1f9550a0.jpg" alt="Money Heist">
+            <div class="hover-details">
+              <h3>Money Heist</h3>
+              <p>A group of thieves pull off the biggest heist in history.</p>
+              <a href="#" class="play-btn">Play</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-more">See More</a>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="faq.html">FAQ</a>
+        <a href="helpcentre.html">Help Center</a>
+        <a href="#">Account</a>
+        <a href="mediacentre.html">Media Center</a>
+        <a href="investersrelation.html">Investor Relations</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="waystowatch.html">Ways to Watch</a>
+        <a href="termsofuse.html">Terms of Use</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="cookiepreferences.html">Cookie Preferences</a>
+        <a href="corporateinformation.html">Corporate Information</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <p>&copy; 2024 NOVA. All rights reserved.</p>
+      <select>
+        <option>English</option>
+        <option>Español</option>
+        <option>Français</option>
+      </select>
+    </footer>
+  
+    <script>
+      const accordionItems = document.querySelectorAll('.accordion-item');
+  
+      accordionItems.forEach(item => {
+        const title = item.querySelector('.accordion-title');
+  
+        title.addEventListener('click', () => {
+          item.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+  </html>

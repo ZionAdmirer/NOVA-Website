@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA - My List</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #141414;
+      color: #fff;
+    }
+
+    header {
+      background-color: #141414;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #e50914;
+      margin: 0;
+    }
+
+    .my-list {
+      padding: 100px 20px 50px;
+    }
+
+    .my-list h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .content-item {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .content-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .hover-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .content-item:hover .hover-details {
+      opacity: 1;
+    }
+
+    .hover-details h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .hover-details p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .play-btn {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #141414;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: #737373;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #b3b3b3;
+    }
+
+    footer p {
+      color: #737373;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>NOVA</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="my-list">
+      <h1>My List</h1>
+      <div class="content-grid">
+        <div class="content-item">
+          <img src="movie1.jpg" alt="Movie 1">
+          <div class="hover-details">
+            <h3>Movie 1</h3>
+            <p>Description of Movie 1</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="tvshow1.jpg" alt="TV Show 1">
+          <div class="hover-details">
+            <h3>TV Show 1</h3>
+            <p>Description of TV Show 1</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="movie2.jpg" alt="Movie 2">
+          <div class="hover-details">
+            <h3>Movie 2</h3>
+            <p>Description of Movie 2</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="tvshow2.jpg" alt="TV Show 2">
+          <div class="hover-details">
+            <h3>TV Show 2</h3>
+            <p>Description of TV Show 2</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="movie3.jpg" alt="Movie 3">
+          <div class="hover-details">
+            <h3>Movie 3</h3>
+            <p>Description of Movie 3</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="tvshow3.jpg" alt="TV Show 3">
+          <div class="hover-details">
+            <h3>TV Show 3</h3>
+            <p>Description of TV Show 3</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="movie4.jpg" alt="Movie 4">
+          <div class="hover-details">
+            <h3>Movie 4</h3>
+            <p>Description of Movie 4</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="tvshow4.jpg" alt="TV Show 4">
+          <div class="hover-details">
+            <h3>TV Show 4</h3>
+            <p>Description of TV Show 4</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="movie5.jpg" alt="Movie 5">
+          <div class="hover-details">
+            <h3>Movie 5</h3>
+            <p>Description of Movie 5</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="tvshow5.jpg" alt="TV Show 5">
+          <div class="hover-details">
+            <h3>TV Show 5</h3>
+            <p>Description of TV Show 5</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="movie6.jpg" alt="Movie 6">
+          <div class="hover-details">
+            <h3>Movie 6</h3>
+            <p>Description of Movie 6</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+        <div class="content-item">
+          <img src="tvshow6.jpg" alt="TV Show 6">
+          <div class="hover-details">
+            <h3>TV Show 6</h3>
+            <p>Description of TV Show 6</p>
+            <a href="#" class="play-btn">Play</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">FAQ</a>
+      <a href="#">Help Center</a>
+      <a href="#">Account</a>
+      <a href="#">Media Center</a>
+      <a href="#">Investor Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Ways to Watch</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Corporate Information</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <p>&copy; 2024 NOVA. All rights reserved.</p>
+  </footer>
+</body>
+</html>

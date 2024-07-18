@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA - Contact Us</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #141414;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #141414;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #e50914;
+      margin: 0;
+    }
+
+    .contact-us {
+      padding: 100px 20px 50px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .contact-us h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact-us h2 {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+
+    .contact-us p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .contact-us ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .contact-us li {
+      margin-bottom: 10px;
+    }
+
+    .contact-us a {
+      color: #e50914;
+      text-decoration: none;
+    }
+
+    .contact-us a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-us .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-us label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .contact-us input,
+    .contact-us textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #303030;
+      border-radius: 4px;
+      background-color: #303030;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+    }
+
+    .contact-us textarea {
+      resize: vertical;
+    }
+
+    .contact-us button {
+      background-color: #e50914;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-us button:hover {
+      background-color: #b81d24;
+    }
+
+    footer {
+      background-color: #141414;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: #737373;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #b3b3b3;
+    }
+
+    footer p {
+      color: #737373;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>NOVA</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-us">
+      <h1>Contact Us</h1>
+
+      <h2>Get in Touch</h2>
+      <p>Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <h2>Other Contact Options</h2>
+      <p>You can also reach us through the following channels:</p>
+      <ul>
+        <li>Email: <a href="mailto:support@nova.com">support@nova.com</a></li>
+        <li>Phone: 1-800-123-4567</li>
+        <li>Live Chat: Available on our website</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Browse</a>
+      <a href="#">My List</a>
+      <a href="#">Account</a>
+      <a href="#">Help Center</a>
+      <a href="#">Investors Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>&copy; 2024 NOVA. All rights reserved.</p>
+  </footer>
+</body>
+</html>

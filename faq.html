@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA - FAQs</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #141414;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #141414;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #e50914;
+      margin: 0;
+    }
+
+    .faqs {
+      padding: 100px 20px 50px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .faqs h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .accordion {
+      width: 100%;
+    }
+
+    .accordion-item {
+      background-color: #303030;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .accordion-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .accordion-title:after {
+      content: '+';
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-title:after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+      padding-bottom: 20px;
+    }
+
+    footer {
+      background-color: #141414;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: #737373;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #b3b3b3;
+    }
+
+    footer p {
+      color: #737373;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>NOVA</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="faqs">
+      <h1>Frequently Asked Questions</h1>
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-title">What is NOVA?</div>
+          <div class="accordion-content">
+            <p>NOVA is a streaming service that offers a wide variety of movies, TV shows, and more.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">How much does NOVA cost?</div>
+          <div class="accordion-content">
+            <p>NOVA offers several subscription plans starting at $8.99 per month.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">Can I watch NOVA on my TV?</div>
+          <div class="accordion-content">
+            <p>Yes, you can watch NOVA on your TV using compatible devices like smart TVs, streaming media players, or by connecting your computer to your TV.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">How many devices can I use with my NOVA account?</div>
+          <div class="accordion-content">
+            <p>The number of devices you can use depends on your subscription plan. Most plans allow you to stream on multiple devices simultaneously.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">Can I cancel my NOVA subscription anytime?</div>
+          <div class="accordion-content">
+            <p>Yes, you can cancel your NOVA subscription at any time without any penalties or fees.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">Does NOVA offer offline viewing?</div>
+          <div class="accordion-content">
+            <p>Yes, NOVA allows you to download select movies and TV shows to watch offline on your mobile devices.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">What is the difference between NOVA and other streaming services?</div>
+          <div class="accordion-content">
+            <p>NOVA offers a unique combination of features, including a vast library of content, personalized recommendations, and a user-friendly interface.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">Can I share my NOVA account with others?</div>
+          <div class="accordion-content">
+            <p>Yes, you can share your NOVA account with others, but please note that each account can only be used by one person at a time.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">How do I contact NOVA customer support?</div>
+          <div class="accordion-content">
+            <p>You can contact NOVA customer support by visiting our Help Center or by sending an email to [support@nova.com](mailto:support@nova.com).</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-title">What are the system requirements for using NOVA?</div>
+          <div class="accordion-content">
+            <p>NOVA can be used on devices with the following system requirements: Windows 7 or later, macOS 10.12 or later, Android 5.0 or later, and iOS 11 or later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Browse</a>
+      <a href="#">My List</a>
+      <a href="#">Account</a>
+      <a href="#">Help Center</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>&copy; 2024 NOVA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+      const title = item.querySelector('.accordion-title');
+
+      title.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

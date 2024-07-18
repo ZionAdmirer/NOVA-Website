@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA - Cookie Preferences</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #141414;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #141414;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #e50914;
+      margin: 0;
+    }
+
+    .cookie-preferences {
+      padding: 100px 20px 50px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .cookie-preferences h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .cookie-preferences h2 {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+
+    .cookie-preferences p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .cookie-preferences ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .cookie-preferences li {
+      margin-bottom: 10px;
+    }
+
+    .cookie-preferences .cookie-type {
+      background-color: #303030;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .cookie-preferences .cookie-type h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .cookie-preferences .cookie-type label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .cookie-preferences .cookie-type input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .cookie-preferences .save-btn {
+      background-color: #e50914;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .cookie-preferences .save-btn:hover {
+      background-color: #b81d24;
+    }
+
+    footer {
+      background-color: #141414;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: #737373;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #b3b3b3;
+    }
+
+    footer p {
+      color: #737373;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>NOVA</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="cookie-preferences">
+      <h1>Cookie Preferences</h1>
+
+      <h2>What are Cookies?</h2>
+      <p>Cookies are small text files that are stored on your device when you visit a website. They help the website remember your preferences and provide a better user experience.</p>
+
+      <h2>Cookie Types</h2>
+      <div class="cookie-type">
+        <h3>Necessary Cookies</h3>
+        <p>These cookies are essential for the website to function properly. They cannot be disabled.</p>
+        <label><input type="checkbox" checked disabled> Necessary Cookies</label>
+      </div>
+      <div class="cookie-type">
+        <h3>Functional Cookies</h3>
+        <p>These cookies help the website remember your preferences and provide a personalized experience.</p>
+        <label><input type="checkbox" checked> Functional Cookies</label>
+      </div>
+      <div class="cookie-type">
+        <h3>Analytics Cookies</h3>
+        <p>These cookies collect information about how you use the website, which helps us improve it.</p>
+        <label><input type="checkbox" checked> Analytics Cookies</label>
+      </div>
+      <div class="cookie-type">
+        <h3>Marketing Cookies</h3>
+        <p>These cookies are used to deliver relevant ads and track the effectiveness of our marketing campaigns.</p>
+        <label><input type="checkbox"> Marketing Cookies</label>
+      </div>
+
+      <a href="#" class="save-btn">Save Preferences</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Browse</a>
+      <a href="#">My List</a>
+      <a href="#">Account</a>
+      <a href="#">Help Center</a>
+      <a href="#">Investors Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy</a>
+    </div>
+    <p>&copy; 2024 NOVA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
